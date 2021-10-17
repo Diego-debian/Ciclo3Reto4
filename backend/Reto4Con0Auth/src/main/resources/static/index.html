@@ -17,10 +17,29 @@
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
 <h1>MisiónTIC 2022</h1>
-<div class="container"></div>
+
+<div class="container unauthenticated">
+    Para iniciar sesión con GitHub:
+    <a href="/oauth2/authorization/github">click here</a></div>
+
+<div class="container authenticated" style="display:none">
+    Logged in as: <span id="user"></span>
+    <ol>
+        <li> <a href="http://localhost:8080/frontend/menu.html"> Options </a> </li>
+
+    </ol>
+</div>
+
 </body>
+<script type="text/javascript">
+    $.get("/user", function (data) {
+    $("#user").html(data.name);
+    $(".unauthenticated").hide()
+    $(".authenticated").show()
+  });
+</script>
 </html>
