@@ -9,8 +9,8 @@ function registro(){
     
     $.ajax({
 	type:'POST',
-	//url:"http://129.151.111.172/api/Client/save",
-	url:"http://localhost:8080/api/Client/save",
+	url:"http://129.151.111.172:8080/api/Client/save",
+	//url:"http://localhost:8080/api/Client/save",
 
 	contentType: "application/json; charset=utf-8",
 	dataType: 'json',
@@ -34,8 +34,8 @@ function registro(){
 function obtenerItems(){
 
     $.ajax({
-	//url:"http://129.151.111.172/api/Client/all",
-	url:"http://localhost:8080/api/Client/all",
+	url:"http://129.151.111.172:8080/api/Client/all",
+	//url:"http://localhost:8080/api/Client/all",
 
 	contentType: "application/json;  charset=utf-8",
 	dataType: 'json',
@@ -76,8 +76,8 @@ function obtenerItems(){
 function obtenerItemEspecifico(idItem){
     $.ajax({
 	
-	//url:"http://129.151.111.172/api/Client/"+idItem,
-	url:"http://localhost:8080/api/Client/"+idItem,
+	url:"http://129.151.111.172:8080/api/Client/"+idItem,
+	//url:"http://localhost:8080/api/Client/"+idItem,
 
 	contentType: "application/json;  charset=utf-8",
 	dataType: 'json',
@@ -108,7 +108,8 @@ function DeleteItem(idItem){
     $.ajax({
 	dataType:'json',
 	data:dataToSend,
-	url:"http://localhost:8080/api/Client/"+idItem,
+	url: "http://129.151.111.172:8080/api/Client/"+idItem,
+	//url:"http://localhost:8080/api/Client/"+idItem,
 	type:'DELETE',
 	contentType:'application/json',
 	success:function(response) {
@@ -140,7 +141,8 @@ function actualizarItem(idItem){
 	dataType: 'json',
 	data:dataToSend,
 	contentType:'application/json',
-	url:"http://localhost:8080/api/Client/update",
+	//url:"http://localhost:8080/api/Client/update",
+	url: "http://129.151.111.172:8080/api/Client/update",
 	type:'PUT',
 
 	success:function(response) {

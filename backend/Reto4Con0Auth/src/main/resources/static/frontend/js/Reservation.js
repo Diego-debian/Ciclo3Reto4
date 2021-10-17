@@ -1,8 +1,8 @@
 function obtenerItems(){
 
     $.ajax({
-	//url:"http://129.151.111.172/api/Reservation/all",
-	url:"http://localhost:8080/api/Reservation/all",
+	url:"http://129.151.111.172:8080/api/Reservation/all",
+	//url:"http://localhost:8080/api/Reservation/all",
 	contentType: "application/json; charset=utf-8",
 	dataType: 'json',
 	type:'GET',
@@ -47,8 +47,8 @@ function registro(){
     
     $.ajax({
 	type:'POST',
-	//url:"http://129.151.111.172/api/Reservation/save",
-	url:"http://localhost:8080/api/Reservation/save",
+	url:"http://129.151.111.172:8080/api/Reservation/save",
+	//url:"http://localhost:8080/api/Reservation/save",
 	contentType: "application/json; charset=utf-8",
 	dataType: 'json',
 	data: JSON.stringify(var2),
@@ -73,8 +73,8 @@ function registro(){
 
 function obtenerItemEspecifico(idItem){
     $.ajax({
-	//url:"http://129.151.111.172/api/Reservation/"+idItem,
-	url:"http://localhost:8080/api/Reservation/"+idItem,
+	url:"http://129.151.111.172:8080/api/Reservation/"+idItem,
+	//url:"http://localhost:8080/api/Reservation/"+idItem,
 	contentType: "application/json; charset=utf-8",
 	dataType: 'json',
 	type:'GET',
@@ -103,7 +103,8 @@ function DeleteItem(idItem){
     $.ajax({
 	dataType:'json',
 	data:dataToSend,
-	url:"http://localhost:8080/api/Reservation/"+idItem,
+	url:"http://129.151.111.172:8080/api/Reservation/"+idItem,
+	//url:"http://localhost:8080/api/Reservation/"+idItem,
 	type:'DELETE',
 	contentType:'application/json',
 	success:function(response) {
@@ -137,7 +138,8 @@ function actualizarItem(idItem){
 	dataType: 'json',
 	data:dataToSend,
 	contentType:'application/json',
-	url:"http://localhost:8080/api/Motorbike/update",
+	//url:"http://localhost:8080/api/Motorbike/update",
+	url:"http://129.151.111.172:8080/api/Reservation/update",
 	type:'PUT',
 
 	success:function(response) {

@@ -10,8 +10,8 @@ function registro(){
     };
     $.ajax({
 	type:'POST',
-//	url:"http://129.151.111.172/api/Motorbike/save",
-	url:"http://localhost:8080/api/Motorbike/save",
+	url:"http://129.151.111.172:8080/api/Motorbike/save",
+	//url:"http://localhost:8080/api/Motorbike/save",
 
 	contentType: "application/json;  charset=utf-8",
 	dataType: 'json',
@@ -38,8 +38,8 @@ function registro(){
 function obtenerItems(){
 
     $.ajax({
-	//url:"http://129.151.111.172/api/Motorbike/all",
-	url:"http://localhost:8080/api/Motorbike/all",
+	url:"http://129.151.111.172:8080/api/Motorbike/all",
+	//url:"http://localhost:8080/api/Motorbike/all",
 
         
 	contentType: "application/json; charset=utf-8",
@@ -79,8 +79,8 @@ function obtenerItems(){
 
 function obtenerItemEspecifico(idItem){
     $.ajax({
-	//url:"http://129.151.111.172/api/Motorbike/"+idItem,
-	url:"http://localhost:8080/api/Motorbike/"+idItem,
+	url:"http://129.151.111.172:8080/api/Motorbike/"+idItem,
+	//url:"http://localhost:8080/api/Motorbike/"+idItem,
 	contentType: "application/json",
 	dataType: 'json',
 	type:'GET',
@@ -112,7 +112,8 @@ function DeleteItem(idItem){
     $.ajax({
 	dataType:'json',
 	data:dataToSend,
-	url:"http://localhost:8080/api/Motorbike/"+idItem,
+	url:"http://129.151.111.172:8080/api/Motorbike/"+idItem,
+	//url:"http://localhost:8080/api/Motorbike/"+idItem,
 	type:'DELETE',
 	contentType:'application/json',
 	success:function(response) {
@@ -148,7 +149,8 @@ function actualizarItem(idItem){
 	dataType:'json',
 	data:dataToSend,
 	contentType:'application/json',
-	url:"http://localhost:8080/api/Motorbike/update",
+	//url:"http://localhost:8080/api/Motorbike/update",
+	url:"http://129.151.111.172:8080/api/Motorbike/update",
 	type:'PUT',
 
 	success:function(response) {
